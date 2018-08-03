@@ -62,6 +62,7 @@
 library(tidyverse)
 library(funModeling)
 library(Hmisc)
+library(gridExtra)
 @
 
 % Setting the ggplot theme:
@@ -119,12 +120,12 @@ What to watch for:
 freq(JTRdf)
 @
 
-\begin{marginfigure}[0cm]
+\begin{figure}
 \includegraphics[width=1\textwidth]{EDA-cat}
 \caption{frequency of categorial variables}
 \label{fig:cat}
 \setfloatalignment{b}% forces caption to be bottom-aligned
-\end{marginfigure}
+\end{figure}
 \medskip
 
 What to watch for:
@@ -141,12 +142,12 @@ What to watch for:
 plot_num(JTRdf)
 @
 
-\begin{marginfigure}[0cm]
+\begin{figure}
 \includegraphics[width=1\textwidth]{EDA-num}
 \caption{frequency of numerical variables}
 \label{fig:num}
 \setfloatalignment{b}% forces caption to be bottom-aligned
-\end{marginfigure}
+\end{figure}
 \medskip
 
 What to watch for:
@@ -168,7 +169,7 @@ What to watch for:
   \item High variation coef = $\frac{stdev}{mean}$ indicates outliers
 \end{itemize}
 
-\subsection{Analyzin numerical and categorial variables at the same time}
+\subsection{Analyzing numerical and categorial variables at the same time}
 
 <<>>=
 describe(JTRdf)
